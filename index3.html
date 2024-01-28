@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сравнение чисел</title>
+    <script>
+        function compareNumbers() {
+            var firstNumber = parseInt(document.getElementById('firstNumber').value);
+            var secondNumber = parseInt(document.getElementById('secondNumber').value);
+
+            if (firstNumber === secondNumber) {
+                document.getElementById('result').innerText = "Числа равны";
+            } else if (firstNumber > secondNumber) {
+                document.getElementById('result').innerText = "Первое число больше второго";
+            } else {
+                document.getElementById('result').innerText = "Первое число меньше второго";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Введите два числа для сравнения:</h2>
+    <input type="number" id="firstNumber" placeholder="Первое число">
+    <input type="number" id="secondNumber" placeholder="Второе число">
+    <button onclick="compareNumbers()">Сравнить</button>
+    <p id="result"></p>
+</body>
+</html>
